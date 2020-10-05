@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,15 +52,15 @@
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Bernhard Kämpf</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Bernhard Kämpf</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-link" href="#">Twitter</a>
-          <a class="nav-link" href="#">Resume</a>
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" href="https://twitter.com/hedgehog_ch">Twitter</a>
+          <a class="nav-link" href="{% static 'infos.pdf' %}">Resume</a>
+          <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
         </div>
       </div>
     </nav>
@@ -74,6 +75,7 @@
         <p>
           <a href="mailto:bernhard.kaempf@gmail.com" class="btn btn-primary my-2">E-Mail me</a>
         </p>
+        <img src="{% static 'ich.jpeg' %}" width="200">
       </div>
     </section>
 
