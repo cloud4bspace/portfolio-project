@@ -71,7 +71,7 @@
     <section class="jumbotron text-center">
       <div class="container">
         <h1>Hi, I'm Bernhard</h1>
-        <p class="lead text-muted">Ich mag vieles und lese nicht oder so.</p>
+        <p class="lead text-muted">Diese Webseite ist das Ergebnis eines Tutorials.</p>
         <p>
           <a href="mailto:bernhard.kaempf@gmail.com" class="btn btn-primary my-2">E-Mail me</a>
         </p>
@@ -86,11 +86,11 @@
           {% for job in jobs.all %}
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" src="{{ job.image.url }}" />
+              <img class="card-img-top" width="50" src="{{ job.image.url }}" />
               <div class="card-body">
                 <p class="card-text">{{ job.summary }}</p>
               </div>
-            </div>
+I            </div>
           </div>
           {% endfor %}
         </div>
