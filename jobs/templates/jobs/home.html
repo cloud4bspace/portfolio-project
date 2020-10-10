@@ -85,8 +85,8 @@
         <div class="row">
           {% for job in jobs.all %}
           <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <img class="card-img-top" width="50" src="{{ job.image.url }}" />
+            <div class="card mb-4 shadow-sm" style="padding:5px;" style="background:red;">
+              <img class="card-img-top" width="50" style="margin:5px;" src="{{ job.image.url }}" />
               <div class="card-body">
                 <p class="card-text">{{ job.summary }}</p>
               </div>
